@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="css\index.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <script type="text/javascript" src="js\sortinglistClean.js"></script>
+</head>
+<body>
+  <div id="body">
+    <h1>To-Do List</h1>
+    <div id="make">
+      <input id="todo" type="text" onclick="hideSuccess();" placeholder="Enter To-Do Item">
+      <div id="drawer">
+        <select id="priority">
+          <option value="null">Select Priority</option>
+          <option value="high_priority">High Priority</option>
+          <option value="low_priority">Low Priority</option>
+          <option value="no_rush">None</option>
+        </select>
+      </div>
+      <input id="add" type="button" onclick="add();" value="Add">
+      <input id="remove" type="button" onclick="remove();" value="Remove">
+      <div id="sort_button">
+        <input id="sort" type="button" onclick="sortList();" value="Sort By Priority">
+      </div>
+      <h3 id="success">Item Successfully Added/Removed!</h3>
+    </div>
+    <div id="frame">
+      <div id="unsorted">
+        <table id="not_sorted">
+          <tr id="first">
+            <th>Your List</th>
+          </tr>
+        </table>
+        <div id="list_content">
+          <div id="high_priority">
+            <table>
+              <tbody id="high">
+                <tr class="first">
+                  <th>High Priority</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="low_priority">
+            <table>
+              <tbody id="low">
+                <tr class="first">
+                  <th>Low Priority</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="no_rush">
+            <table>
+              <tbody id="none">
+                <tr class="first">
+                  <th>No Rush</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
